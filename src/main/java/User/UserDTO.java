@@ -1,8 +1,14 @@
 package User;
 
 public class UserDTO {
-    String userID;
-    String userPassword;
+    private String userID;
+    private String userPassword;
+
+    public UserDTO(String userID, String userPassword) {
+        super();
+        this.userID = userID;
+        this.userPassword = userPassword;
+    }
 
     public String getUserID() {
         return userID;
@@ -19,5 +25,4 @@ public class UserDTO {
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
     }
-
 }
