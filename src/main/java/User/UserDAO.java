@@ -19,4 +19,16 @@ public class UserDAO {
         }
         return -1;
     }
+    public int delete(String userID){
+        String SQL="UPDATE BBS SET bbsAvailable=0 WHERE bbsID=?";
+        try {
+            Connection conn= DatabaseUtil.getConnection();
+            PreparedStatement pstst=conn.prepareStatement(SQL);
+            pstst.setString(1,userID);
+            return pstst.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return -1;
+    }
 }
