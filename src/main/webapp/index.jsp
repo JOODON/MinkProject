@@ -45,7 +45,7 @@ Hello World!
     <input type="submit" value="회원가입">
 </form>
     </br>
-<form action="#" method="post">
+<form action="deleteAction.jsp" method="post">
     <input type="text" name="deleteID">
     <input type="submit" value="삭제">
 </form>
