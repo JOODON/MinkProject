@@ -25,4 +25,11 @@ public class UserDTO {
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
     }
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "userID='" + userID + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                '}';
+    }
 }
