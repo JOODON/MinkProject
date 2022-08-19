@@ -25,7 +25,7 @@
 
     UserDTO userDTO=new UserDTO(userID,userPassword);
     UserDAO userDAO=new UserDAO();
-    int insertCount= userDAO.addUser(userDTO);
+    int insertCount = userDAO.addUser(userDTO);
 
     if(insertCount==1){
         PrintWriter script=response.getWriter();

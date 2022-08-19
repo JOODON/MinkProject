@@ -49,11 +49,11 @@ Hello World!
     <input type="text" name="deleteID" placeholder="UserID">
     <input type="submit" value="삭제">
 </form>
+</br>
 <form action="update.jsp" method="post">
-    </br>
-    <input type="text" name="userID">
-    <input type="text" name="userPassword">
-    <input type="text" name="changeID">
+    <input type="text" name="userID" placeholder="변경 되는 아이디">
+    <input type="text" name="userPassword" placeholder="변경되는 비밀번호">
+    <input type="text" name="changeID" placeholder="수정할 아이디">
     <input type="submit" value="수정">
 </form>
 <%

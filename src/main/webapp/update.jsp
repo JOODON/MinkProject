@@ -5,6 +5,7 @@
 
 <%
         request.setCharacterEncoding("UTF-8");
+
         String userID=null;
         String userPassword=null;
         String changeID=null;
@@ -28,10 +29,9 @@
             script.close();
             return;
         }
-
         UserDTO userDTO=new UserDTO(userID,userPassword);
         UserDAO userDAO=new UserDAO();
-        int insertCount= userDAO.update(userDTO,changeID);
+        int insertCount=userDAO.update(userDTO,changeID);
 
         if(insertCount==1){
             PrintWriter script=response.getWriter();
@@ -42,3 +42,4 @@
             script.close();
             return;
         }
+%>
