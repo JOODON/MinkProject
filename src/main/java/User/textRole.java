@@ -7,13 +7,14 @@ import java.util.List;
 
 public class textRole {
     public static void main(String[] args) {
-            String userID=null;
+            String userID="Hello";
             String userPassword="1234";
+            String changeuserID="admin";
 
             UserDTO userDTO=new UserDTO(userID,userPassword);
             UserDAO userDAO=new UserDAO();
 
-            int insertCount= userDAO.delete(userDTO);
+            int insertCount= userDAO.update(userDTO,changeuserID);
 
 //        List<UserDTO> list=userDAO.getUsers();
 

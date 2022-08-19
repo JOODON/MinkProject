@@ -40,18 +40,20 @@
 Hello World!
 
 <form action="JoinAction.jsp" method="post">
-    <input type="text" name="userID">
-    <input type="password" name="userPassword">
+    <input type="text" name="userID" placeholder="UserID">
+    <input type="password" name="userPassword" placeholder="UserPassword">
     <input type="submit" value="회원가입">
 </form>
     </br>
 <form action="deleteAction.jsp" method="post">
-    <input type="text" name="deleteID">
+    <input type="text" name="deleteID" placeholder="UserID">
     <input type="submit" value="삭제">
 </form>
-<form action="#" method="post">
+<form action="update.jsp" method="post">
     </br>
-    <input type="text" name="correctID">
+    <input type="text" name="userID">
+    <input type="text" name="userPassword">
+    <input type="text" name="changeID">
     <input type="submit" value="수정">
 </form>
 <%

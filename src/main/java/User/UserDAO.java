@@ -94,4 +94,32 @@ public class UserDAO {
             }
             return insertCount;
         }
+        public int update(UserDTO userDTO,String changeID){
+            int insertCount=0;
+            Connection conn=null; //접속하는 부분 설정
+            PreparedStatement ps=null;//호출시켜주는 부분 설정
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                conn=DriverManager.getConnection(dburl,dbUser,dbpasswd);
+                String sql="UPDATE user SET userID =?,userPassword =? WHERE userID=?";
+                ps=conn.prepareStatement(sql);
+
+                ps.setString(1,userDTO.getUserID());
+                ps.setString(2,userDTO.getUserPassword());
+                ps.setString(3,changeID);
+
+                insertCount = ps.executeUpdate();
+            }catch (Exception e){
+               e.printStackTrace();
+            }finally {
+                if(ps != null && conn != null){
+                    try {
+                        ps.close();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }
+            return insertCount;
+        }
     }
