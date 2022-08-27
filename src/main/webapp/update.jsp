@@ -29,6 +29,7 @@
             script.close();
             return;
         }
+
         UserDTO userDTO=new UserDTO(userID,userPassword);
         UserDAO userDAO=new UserDAO();
         int insertCount=userDAO.update(userDTO,changeID);
