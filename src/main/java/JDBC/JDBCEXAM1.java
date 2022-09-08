@@ -6,5 +6,7 @@ public class JDBCEXAM1 {
         Role role=dao.getRole(1);
 
         System.out.println(role);
+
+
     }
 }
