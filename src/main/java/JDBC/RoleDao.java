@@ -1,12 +1,12 @@
 package JDBC;
 //JDBC 기초
-//1.IMPORT JAVA.SQL
-//2.드라이버 로드
-//3단계 Connection 객체 생성
-//4단계 Statement 객체 생성
-//5단게 SQL 결과물이 있다면 ResultSet 객체 생성
-//6단계 객체를 닫는다 순서로 진행
-//DriverManager ->Connection -> Statement ->ResultSet 순서로 진행 닫을떄는 반대로 진행!
+////1.IMPORT JAVA.SQL
+////2.드라이버 로드
+////3단계 Connection 객체 생성
+////4단계 Statement 객체 생성
+////5단게 SQL 결과물이 있다면 ResultSet 객체 생성
+////6단계 객체를 닫는다 순서로 진행
+////DriverManager ->Connection -> Statement ->ResultSet 순서로 진행 닫을떄는 반대로 진행!
 import java.sql.*;
 public class RoleDao {
     private static String dburl="jdbc:mysql://localhost:3307/role";
@@ -66,6 +66,7 @@ public class RoleDao {
         }
         return role;
     }
+
     public int addRole(Role role){
         int insertCount=0;
 
@@ -107,5 +108,4 @@ public class RoleDao {
         }
         return insertCount;
     }
-
 }
