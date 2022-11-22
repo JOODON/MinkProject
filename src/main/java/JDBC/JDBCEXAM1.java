@@ -7,6 +7,5 @@ public class JDBCEXAM1 {
 
         System.out.println(role);
 
-
     }
 }

@@ -44,6 +44,7 @@ Hello World!
     <input type="password" name="userPassword" placeholder="UserPassword">
     <input type="submit" value="회원가입">
 </form>
+
     </br>
 <form action="deleteAction.jsp" method="post">
     <input type="text" name="deleteID" placeholder="UserID">

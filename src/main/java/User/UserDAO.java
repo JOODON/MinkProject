@@ -42,6 +42,7 @@ public class UserDAO {
         }
         return insertCount;
     }
+
     public List<UserDTO> getUsers(){
         List<UserDTO> list = new ArrayList<>();
 
@@ -68,6 +69,7 @@ public class UserDAO {
             }
             return list;
         }
+
         public int delete(UserDTO userDTO){
             int insertCount=0;
             Connection conn=null; //접속하는 부분 설정
