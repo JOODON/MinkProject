@@ -39,6 +39,7 @@
 <body>
 Hello World!
 
+
 <form action="JoinAction.jsp" method="post">
     <input type="text" name="userID" placeholder="UserID">
     <input type="password" name="userPassword" placeholder="UserPassword">
@@ -57,12 +58,25 @@ Hello World!
     <input type="text" name="changeID" placeholder="수정할 아이디">
     <input type="submit" value="수정">
 </form>
+
+<form action="index.jsp" method="post">
+    <select name="search" class="id" onselect="alert(`하이`);">
+        <option value="안녕하세요">안녕하세요</option>
+        <option value="ㅁㅁㅁㅁㅁ">ㅁㅁㅁㅁㅁ</option>
+        <option value="dongho">dongho</option>
+    </select>
+    <input type="submit">
+    <a href="http://localhost:8080/MinkProject_war_exploded/index.jsp">돌아기기</a>
+</form>
 <%
+    request.setCharacterEncoding("UTF-8");
+    String value=request.getParameter("search");
+    System.out.println(value);
+
     UserDAO userDAO=new UserDAO();
     List<UserDTO> list =userDAO.getUsers();
     for (int i=0; i< list.size(); i++) {
-
-
+    if(value==null||list.get(i).getUserID().equals(value)){
 %>
 <div class="table">
     <table border="1px">
@@ -74,7 +88,13 @@ Hello World!
     </tr>
 <%
         }
+    }
+
 %>
+
+<script>
+
+</script>
 </table>
 </div>
 </body>

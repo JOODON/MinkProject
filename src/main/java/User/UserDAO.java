@@ -64,7 +64,8 @@ public class UserDAO {
                 }
             }catch (Exception e){
                 e.printStackTrace();
-            }}catch (Exception ex){
+            }
+        }catch (Exception ex){
                 ex.printStackTrace();
             }
             return list;
