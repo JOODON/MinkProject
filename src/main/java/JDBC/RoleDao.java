@@ -7,11 +7,15 @@ package JDBC;
 ////5단게 SQL 결과물이 있다면 ResultSet 객체 생성
 ////6단계 객체를 닫는다 순서로 진행
 ////DriverManager ->Connection -> Statement ->ResultSet 순서로 진행 닫을떄는 반대로 진행!
+import dto.User;
+
 import java.sql.*;
 public class RoleDao {
     private static String dburl="jdbc:mysql://localhost:3307/role";
     private static String dbuser="root";
     private static String dbpassword="kkjjss103@";
+
+
 
     public Role getRole(Integer roldId){
          //롤이라는 데이터를 가져올거기 때문에 롤이라는 형을 선택해줌
