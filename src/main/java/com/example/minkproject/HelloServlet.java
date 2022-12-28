@@ -29,7 +29,6 @@ public class HelloServlet extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
     }
-
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException , ServletException {
 
 
