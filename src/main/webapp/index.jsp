@@ -20,7 +20,6 @@
         th{
             border: none;
             border-bottom: 1px solid #494747;
-
         }
         .id{
             border-bottom: 1px solid #494747;
